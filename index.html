@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Abiha Khan</title>
-<meta name="description" content="Abiha Khan builds new programmes, strategies and partnerships for climate, energy and development work, and stays until they run.">
+<meta name="description" content="Abiha Khan is an independent strategy, programme and partnerships consultant for climate, energy and development organisations.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://abihaofficial.github.io/">
-<meta property="og:title" content="Abiha Khan: I like blank pages">
-<meta property="og:description" content="I build new programmes, strategies and partnerships for climate, energy and development work, and stay until they run.">
+<meta property="og:title" content="Abiha Khan | Strategy, programmes and partnerships">
+<meta property="og:description" content="Independent consultant for climate, energy and development organisations: programme design, strategy, coalitions and strategic communications.">
 <meta property="og:image" content="https://abihaofficial.github.io/share.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="627">
@@ -17,71 +17,67 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=Figtree:wght@500;600&display=swap">
 <style>
-/* Layout: a personal letter. One narrow reading column, stories told in order, generous space, very little decoration. */
+/* Layout: a single reading column, written like a strong profile a search firm would send to a client. */
 /* EDIT COLOURS HERE */
 :root{
-  --paper:#FBFAF7; --ink:#16302A; --soft:#56655F; --rule:#DCE2DE; --mark:#E7A21A; --mark-soft:#F8E7C2;
+  --paper:#FBFAF7; --ink:#16302A; --soft:#56655F; --rule:#DCE2DE; --mark:#C98A0E;
   --display:"Young Serif",Georgia,"Times New Roman",serif;
   --body:"Source Serif 4",Georgia,"Times New Roman",serif;
   --ui:"Figtree","Helvetica Neue",Arial,sans-serif;
 }
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
-  --paper:#101815; --ink:#E9EEEB; --soft:#A2B1AA; --rule:#26332E; --mark:#F0B53D; --mark-soft:#3A3018; color-scheme:dark}}
+  --paper:#101815; --ink:#E9EEEB; --soft:#A2B1AA; --rule:#26332E; --mark:#F0B53D; color-scheme:dark}}
 :root[data-theme="dark"]{
-  --paper:#101815; --ink:#E9EEEB; --soft:#A2B1AA; --rule:#26332E; --mark:#F0B53D; --mark-soft:#3A3018; color-scheme:dark}
+  --paper:#101815; --ink:#E9EEEB; --soft:#A2B1AA; --rule:#26332E; --mark:#F0B53D; color-scheme:dark}
 *{box-sizing:border-box}
 body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:1.15rem;line-height:1.7;
   padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:0}
-.col{max-width:680px;margin:0 auto}
-h1,h2,h3{font-family:var(--display);font-weight:400;margin:0;line-height:1.15;text-wrap:balance}
+.col{max-width:700px;margin:0 auto}
+h1,h2,h3{font-family:var(--display);font-weight:400;margin:0;line-height:1.18;text-wrap:balance}
 p{margin:0}
 p+p{margin-top:1em}
 a{color:inherit;text-decoration-color:var(--mark);text-decoration-thickness:2px;text-underline-offset:4px}
 a:hover{color:var(--soft)}
 a:focus-visible,button:focus-visible{outline:2px solid var(--mark);outline-offset:3px}
 .ui{font-family:var(--ui);font-size:.85rem;font-weight:600;letter-spacing:.02em}
-mark{background:linear-gradient(transparent 58%,var(--mark-soft) 58%);color:inherit;padding:0 .1em}
 
 header.top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;padding-block:24px}
 header.top nav{display:flex;gap:20px;flex-wrap:wrap}
 header.top nav a{text-decoration:none;color:var(--soft)}
 header.top nav a:hover{color:var(--ink)}
 
-.hero{padding-block:72px 64px}
-.hero h1{font-size:clamp(2.6rem,7vw,4.2rem)}
-.hero .lead{margin-top:28px;font-size:1.35rem;line-height:1.6}
-.hero .now{margin-top:28px;color:var(--soft);font-size:1.05rem}
+.hero{padding-block:64px 56px}
+.hero .ui{color:var(--mark)}
+.hero h1{font-size:clamp(2.2rem,5.6vw,3.4rem);margin-top:14px}
+.hero .lead{margin-top:26px;font-size:1.3rem;line-height:1.6}
 
-section{padding-block:56px;border-top:1px solid var(--rule)}
-section > h2{font-size:clamp(1.7rem,4vw,2.3rem);margin-bottom:12px}
-.intro{color:var(--soft);margin-bottom:40px}
+section{padding-block:52px;border-top:1px solid var(--rule)}
+section > h2{font-size:clamp(1.6rem,3.6vw,2.1rem);margin-bottom:22px}
 
-.story{padding-block:28px}
-.story + .story{border-top:1px dashed var(--rule)}
-.story .where{color:var(--mark);display:block;margin-bottom:8px}
-.story h3{font-size:1.5rem;margin-bottom:14px}
-.story .learned{margin-top:16px;padding-left:16px;border-left:2px solid var(--mark);font-style:italic;color:var(--soft)}
+.offer{display:flex;flex-direction:column;gap:22px}
+.offer h3{font-size:1.25rem;margin-bottom:6px}
 
-.work p{max-width:62ch}
-.ways{margin-top:28px;display:flex;flex-direction:column;gap:16px}
-.way{display:grid;grid-template-columns:150px minmax(0,1fr);gap:16px;align-items:baseline}
-.way .ui{color:var(--soft)}
+.role{padding-block:22px}
+.role + .role{border-top:1px dashed var(--rule)}
+.role .where{color:var(--mark);display:block;margin-bottom:6px}
+.role h3{font-size:1.3rem;margin-bottom:10px}
 
-.questions{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:22px}
-.questions strong{font-family:var(--display);font-weight:400;font-size:1.2rem;display:block;margin-bottom:4px}
-.questions span{color:var(--soft)}
+.list{margin:0;padding-left:1.1em;display:flex;flex-direction:column;gap:12px}
 
-.contact h2{font-size:clamp(2rem,5vw,2.8rem)}
-.reach{margin-top:24px;display:flex;flex-wrap:wrap;gap:14px 24px;align-items:center}
+.sectors{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px;padding:0;list-style:none}
+.sectors li{font-family:var(--ui);font-size:.9rem;font-weight:500;border:1px solid var(--rule);border-radius:999px;padding:6px 14px}
+
+.contact h2{font-size:clamp(1.8rem,4.4vw,2.4rem)}
+.reach{margin-top:22px;display:flex;flex-wrap:wrap;gap:14px 24px;align-items:center}
 .reach span{overflow-wrap:anywhere;user-select:all}
 .copy{font-family:var(--ui);font-size:.8rem;font-weight:600;background:transparent;color:var(--ink);border:1.5px solid var(--ink);border-radius:999px;padding:6px 14px;cursor:pointer}
 .copy:hover{background:var(--ink);color:var(--paper)}
-footer{padding-block:32px 48px;color:var(--soft);border-top:1px solid var(--rule);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+.creds{margin-top:28px;color:var(--soft)}
+footer{padding-block:32px 48px;color:var(--soft);border-top:1px solid var(--rule)}
 
 @media (max-width:560px){
   body{font-size:1.08rem}
-  .hero{padding-block:44px 40px}
-  .way{grid-template-columns:minmax(0,1fr);gap:2px}
+  .hero{padding-block:40px 36px}
 }
 </style>
 </head>
@@ -91,95 +87,111 @@ footer{padding-block:32px 48px;color:var(--soft);border-top:1px solid var(--rule
   <header class="top">
     <span class="ui">Abiha Khan</span>
     <nav class="ui" aria-label="Sections">
-      <a href="#stories">Stories</a><a href="#work">Work with me</a><a href="#questions">Questions</a><a href="#write">Write</a>
+      <a href="#offer">What I offer</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#contact">Contact</a>
     </nav>
   </header>
 
   <!-- HERO -->
   <div class="hero">
-    <h1>Hi, I'm Abiha. I like blank pages.</h1>
-    <p class="lead">I'm usually the first person in the room when something new is being built: the first strategy hire, the first communications hire, the first name on a new workstream. I build the thing, find the people who should run it, and <mark>stay until it works without me.</mark></p>
-    <p class="now">These days I work independently from Lahore with climate, energy and development teams.</p>
+    <span class="ui">Independent consultant · Lahore, working worldwide</span>
+    <h1>Strategy, programme design and partnerships for climate, energy and development organisations</h1>
+    <p class="lead">I design new programmes and strategies, bring the right partners and funders behind them, and stay through launch so the people who will run them can carry them forward. My work has spanned an energy transition think tank, a global clean energy network, a diplomatic mission, an offshore wind non-profit and an AI content studio, across Pakistan, the UK, Southeast Asia and international convenings.</p>
   </div>
 
-  <!-- STORIES -->
-  <section id="stories">
-    <h2>A few stories</h2>
-    <p class="intro">Organisation names are left out on purpose. The work is real, and I'm happy to talk about any of it.</p>
-
-    <article class="story">
-      <span class="where ui">An energy think tank · Islamabad</span>
-      <h3>The strategy nobody wanted to read</h3>
-      <p>I joined as the first strategy hire. Everyone agreed the organisation needed a strategy, and nobody was looking forward to reading one.</p>
-      <p>So I started with conversations, not a template. I sat with leadership and every programme team, listened for the things people said in the corridor but never wrote down, and turned it into a plan short enough for the board to actually decide on. The team grew from fifteen to thirty-five while we did it.</p>
-      <p class="learned">Plain words are a form of respect.</p>
-    </article>
-
-    <article class="story">
-      <span class="where ui">A global clean energy network · Istanbul</span>
-      <h3>Fifty people in one room</h3>
-      <p>I was the first person on a new workstream inside a global network. It began as a concept note and a lot of good intentions.</p>
-      <p>Most of the real work happened before anyone booked a flight: months of calls and drafts with members in more than twenty countries, agreeing the words we could all stand behind. By the time fifty of us met in Istanbul, the room already knew what it was there to do.</p>
-      <p class="learned">A convening is mostly what happens before the room.</p>
-    </article>
-
-    <article class="story">
-      <span class="where ui">An AI content studio · Indonesia and Pakistan</span>
-      <h3>Teaching creators, learning from them</h3>
-      <p>I signed creators in two countries to tell clean energy stories, negotiated their rates, and wrote the contracts.</p>
-      <p>Then I designed a full training programme for creators in Indonesia: what to teach, in what order, and how. Writing it made me ask a question I still carry: when AI makes a story easier to tell, what keeps it honest?</p>
-      <p class="learned">The people closest to an audience usually know more than the people briefing them.</p>
-    </article>
-
-    <article class="story">
-      <span class="where ui">A foreign embassy · Islamabad</span>
-      <h3>Writing in someone else's voice</h3>
-      <p>For almost two years I wrote an Ambassador's speeches, talking points and press releases, and hosted national events as MC.</p>
-      <p>I learned to disappear into another person's voice, and to explain grant programmes and development finance to ministries, journalists and business groups who each needed something different from the same facts. I also grew the embassy's Twitter from zero.</p>
-      <p class="learned">Good writing for someone else sounds like them on their best day.</p>
-    </article>
-
-    <article class="story">
-      <span class="where ui">London Climate Action Week · RSA House</span>
-      <h3>Three minutes</h3>
-      <p>In June 2026 I gave a firestarter talk with exactly three minutes to say something worth remembering. I spent them on one idea: what changes when the people using the power also own it.</p>
-      <p class="learned">Short is harder than long, and worth it.</p>
-    </article>
-  </section>
-
-  <!-- WORK WITH ME -->
-  <section id="work" class="work">
-    <h2>Working together</h2>
-    <p>I'm most useful when something needs to exist and doesn't yet: a new programme, a strategy a board can act on, a coalition that needs to agree on its words, or a story that funders and the public will both understand. I listen first, write something people can argue with, and stay through launch.</p>
-    <div class="ways">
-      <div class="way"><span class="ui">A few weeks</span><p>One clear piece of work: a strategy draft, a funding proposal, a messaging framework or a partner map.</p></div>
-      <div class="way"><span class="ui">A few months</span><p>A new programme or workstream, designed, launched and handed over to the people who will run it.</p></div>
-      <div class="way"><span class="ui">Ongoing</span><p>A few days a month on call for strategy, proposals and the moments that matter.</p></div>
+  <!-- VALUE -->
+  <section id="offer">
+    <h2>What I offer</h2>
+    <div class="offer">
+      <div>
+        <h3>Programmes designed to run, not just to read</h3>
+        <p>I take a new country or regional programme from concept to first delivery, shaping the model, the workplan, the partners and the training together with the team who will own it after I leave.</p>
+      </div>
+      <div>
+        <h3>Strategy that boards and funders can act on</h3>
+        <p>I write organisational strategies and funding proposals in plain language, built on interviews with leadership and programme teams, with clear choices, owners and risks that a board can decide on in one sitting.</p>
+      </div>
+      <div>
+        <h3>Coalitions that agree before they meet</h3>
+        <p>I bring governments, funders, think tanks and companies into shared positions, doing the drafting and member alignment ahead of a convening so the room can spend its time on decisions.</p>
+      </div>
+      <div>
+        <h3>Communications that carry complex policy</h3>
+        <p>I turn energy policy, development finance and technical analysis into speeches, briefs, press material and creator-led content that each audience can understand and repeat.</p>
+      </div>
     </div>
   </section>
 
-  <!-- QUESTIONS -->
-  <section id="questions">
-    <h2>Questions I'm sitting with</h2>
-    <ul class="questions" style="margin-top:24px">
-      <li><strong>What is a job, once AI does half of it?</strong><span>I use these tools every day. I'm more interested in which parts of work stay human than in how fast the rest goes.</span></li>
-      <li><strong>Who owns the energy transition?</strong><span>The people paying for it, using it and living next to it should have more say than they usually get.</span></li>
-      <li><strong>Can good work also be beautiful?</strong><span>I care about craft, in a well-cut jacket or a well-made document. I think it's a way of taking people seriously.</span></li>
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <h2>Experience</h2>
+
+    <article class="role">
+      <span class="where ui">Energy transition think tank · Pakistan · 2024 to 2026</span>
+      <h3>Senior Associate, Strategy and Partnerships</h3>
+      <p>As the organisation's first strategy hire, I wrote its multi-year strategy from leadership interviews and programme workplans, ran a three-year strategic risk analysis covering circular debt, political economy and the renewable opportunity, and co-authored grant proposals while the team grew from fifteen to thirty-five people.</p>
+    </article>
+
+    <article class="role">
+      <span class="where ui">Global clean energy network · International · 2024 to 2026</span>
+      <h3>Co-Convener of a new workstream</h3>
+      <p>As the first person on the workstream, I wrote its grant proposal, session framings and briefings, aligned members across more than twenty countries on shared positions, and brought it to a fifty-person inaugural convening in Istanbul, followed by an intervention on energy transition framing at a diplomacy convening in Nairobi.</p>
+    </article>
+
+    <article class="role">
+      <span class="where ui">AI content studio · Pakistan and Indonesia · 2026</span>
+      <h3>Managing Partner</h3>
+      <p>I led partnerships and operations for a studio telling clean energy stories, building and contracting creator partnerships in two countries, designing a full capacity-building programme for creators in Indonesia, and speaking on customer-owned clean electrification at London Climate Action Week.</p>
+    </article>
+
+    <article class="role">
+      <span class="where ui">Offshore wind non-profit · London · 2024</span>
+      <h3>Project Officer and Communications Lead</h3>
+      <p>As the first communications hire, I produced press, newsletter and event communications for a major offshore wind summit and managed the project pipeline and stakeholder reporting across four markets in Asia and Latin America.</p>
+    </article>
+
+    <article class="role">
+      <span class="where ui">Foreign embassy · Islamabad · 2021 to 2022</span>
+      <h3>Secretary and Communications Lead to the Ambassador</h3>
+      <p>I drafted the Ambassador's speeches and talking points, led communications for an eight-million-dollar development grant programme and a long-term development finance framework, and worked with ministries, media and business groups on trade, health and development partnerships.</p>
+    </article>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <h2>Projects I take on</h2>
+    <ul class="list">
+      <li>Designing and launching new country, regional or thematic programmes, including partner models, workplans and capacity-building curricula.</li>
+      <li>Writing organisational strategies and strategic risk analyses for think tanks, networks and foundations.</li>
+      <li>Drafting funding proposals and donor materials for philanthropic and multilateral funders.</li>
+      <li>Setting up and running coalitions, member networks and convenings, from concept note to the room.</li>
+      <li>Strategic communications and messaging for leadership, including speeches, briefs and campaign narratives.</li>
+    </ul>
+    <p style="margin-top:22px">I work in focused sprints of a few weeks, programme builds of three to six months, or a monthly retainer, and I scope every engagement in a short call before quoting.</p>
+
+    <h2 style="font-size:1.4rem;margin-top:40px">Sectors</h2>
+    <ul class="sectors">
+      <li>Clean energy and power markets</li>
+      <li>Offshore wind and renewables</li>
+      <li>Climate policy and diplomacy</li>
+      <li>Development finance and grants</li>
+      <li>Philanthropy and global networks</li>
+      <li>Digital content and the creator economy</li>
     </ul>
   </section>
 
   <!-- CONTACT -->
-  <section id="write" class="contact">
-    <h2>Building something new? I'd love to hear about it.</h2>
+  <section id="contact" class="contact">
+    <h2>Get in touch</h2>
+    <p style="margin-top:14px">I am available for consultancies, retainers and senior programme roles.</p>
     <div class="reach">
       <span id="email">abiha@alumni.schwarzmanscholars.org</span>
       <button class="copy" id="copy-email" type="button">Copy email</button>
       <a href="https://www.linkedin.com/in/abihafnu" target="_blank" rel="noopener">LinkedIn</a>
     </div>
-    <p class="ui" style="margin-top:28px;color:var(--soft)">Schwarzman Scholar · BS (Hons) Management, University of the Punjab · English, Urdu, Hindi</p>
+    <p class="creds ui">Schwarzman Scholar, Master's in Global Affairs · BS (Hons) Management, University of the Punjab · English, Urdu, Hindi</p>
   </section>
 
-  <footer class="ui"><span>© 2026 Abiha Khan</span><span>Written and built in Lahore</span></footer>
+  <footer class="ui">© 2026 Abiha Khan</footer>
 </div>
 
 <script>
