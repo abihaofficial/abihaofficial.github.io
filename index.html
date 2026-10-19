@@ -3,306 +3,299 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Abiha Khan Consulting</title>
-<meta name="description" content="Abiha Khan builds programmes, strategies and partnerships for climate, energy and development organisations.">
+<title>Abiha Khan</title>
+<meta name="description" content="Abiha Khan builds programmes from a blank page and stays until they run. Strategy, partnerships and storytelling for climate, energy and development work.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;700;800&family=Literata:opsz,wght@7..72,400;7..72,500&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
-/* Layout: a programme plan on one page. Hero thesis, four services, a real 0-to-1 sequence, proof from past builds, ways to work together. */
-/* EDIT COLOURS HERE: change these tokens and the whole site follows. */
+/* Layout: a working notebook in black ink. Hairline panels, mono labels, one hand-drawn-style line diagram per idea. */
+/* EDIT COLOURS HERE */
 :root{
-  --bg:#F5F6F8; --surface:#FFFFFF; --ink:#0E1726; --muted:#4A5568; --line:#D5DAE2;
-  --accent:#2747D6; --accent-soft:#E3E8FB; --on-accent:#FFFFFF;
-  --display:"Schibsted Grotesk","Helvetica Neue",Arial,sans-serif;
-  --body:"Literata",Georgia,"Times New Roman",serif;
-  --mono:"JetBrains Mono",ui-monospace,Menlo,Consolas,monospace;
+  --paper:#FFFFFF; --ink:#111111; --soft:#5C5C5C; --rule:#E2E2E2; --wash:#F6F6F4;
+  --sans:"Archivo","Helvetica Neue",Arial,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
 }
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
-  --bg:#0B111C; --surface:#121A28; --ink:#E7EBF2; --muted:#A3AEC2; --line:#243045;
-  --accent:#7D95FF; --accent-soft:#1B2645; --on-accent:#0B111C; color-scheme:dark}}
+  --paper:#0E0E0E; --ink:#F2F2F2; --soft:#A8A8A8; --rule:#2A2A2A; --wash:#161616; color-scheme:dark}}
 :root[data-theme="dark"]{
-  --bg:#0B111C; --surface:#121A28; --ink:#E7EBF2; --muted:#A3AEC2; --line:#243045;
-  --accent:#7D95FF; --accent-soft:#1B2645; --on-accent:#0B111C; color-scheme:dark}
+  --paper:#0E0E0E; --ink:#F2F2F2; --soft:#A8A8A8; --rule:#2A2A2A; --wash:#161616; color-scheme:dark}
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:1.0625rem;line-height:1.65;
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:1.0625rem;line-height:1.6;
   padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:0}
-.wrap{max-width:1120px;margin:0 auto}
-h1,h2,h3{font-family:var(--display);line-height:1.08;margin:0;text-wrap:balance;letter-spacing:-.015em}
+.page{max-width:1040px;margin:0 auto;border-left:1px solid var(--rule);border-right:1px solid var(--rule)}
+h1,h2,h3{margin:0;line-height:1.05;letter-spacing:-.02em;text-wrap:balance}
 p{margin:0}
-a{color:inherit;text-underline-offset:3px;text-decoration-color:var(--accent);text-decoration-thickness:2px}
-a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
-.label{font-family:var(--mono);font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+a{color:inherit;text-underline-offset:3px}
+a:focus-visible,button:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+.mono{font-family:var(--mono);font-size:.74rem;letter-spacing:.08em;text-transform:uppercase}
+.soft{color:var(--soft)}
+svg{display:block;max-width:100%;height:auto}
+svg .ln{stroke:var(--ink);stroke-width:1.6;fill:none;stroke-linecap:round;stroke-linejoin:round}
+svg .ds{stroke:var(--ink);stroke-width:1.6;fill:none;stroke-dasharray:5 6;stroke-linecap:round}
+svg .dot{fill:var(--ink)}
+svg .hole{fill:var(--paper);stroke:var(--ink);stroke-width:1.6}
+svg text{fill:var(--ink);font-family:var(--mono);font-size:11px;letter-spacing:.08em}
 
-/* Header */
-.top{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;padding-block:20px}
-.brand{font-family:var(--display);font-weight:800;font-size:1.15rem;text-decoration:none}
-.brand span{color:var(--accent)}
-.top nav{display:flex;gap:22px;flex-wrap:wrap;font-family:var(--display);font-size:.95rem}
-.top nav a{text-decoration:none;color:var(--muted)}
-.top nav a:hover{color:var(--ink)}
+/* top bar */
+.bar{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;padding:16px 24px;border-bottom:1px solid var(--rule)}
+.bar nav{display:flex;gap:22px;flex-wrap:wrap}
+.bar nav a{text-decoration:none}
+.bar nav a:hover{text-decoration:underline}
 
-/* Hero */
-.hero{padding-block:64px 72px;display:grid;grid-template-columns:minmax(0,1.55fr) minmax(0,1fr);gap:56px;align-items:end;border-bottom:1px solid var(--line)}
-.hero h1{font-size:clamp(2.5rem,6.4vw,4.9rem);font-weight:800}
-.hero h1 .z{color:var(--accent)}
-.hero .lede{margin-top:24px;font-size:1.25rem;max-width:40ch}
-.cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px}
-.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 20px;font-family:var(--display);font-weight:700;text-decoration:none;border:2px solid var(--accent)}
-.btn.primary{background:var(--accent);color:var(--on-accent)}
-.btn.ghost{color:var(--ink)}
-.btn:hover{filter:brightness(1.08)}
-.hero aside{display:flex;flex-direction:column;gap:18px}
-.fact{border-top:2px solid var(--ink);padding-top:10px}
-.fact strong{display:block;font-family:var(--display);font-size:1.6rem;font-weight:800;font-variant-numeric:tabular-nums}
-.fact span{color:var(--muted);font-size:.95rem}
+.panel{padding:72px 24px;border-bottom:1px solid var(--rule)}
+.label{display:flex;justify-content:space-between;gap:12px;margin-bottom:36px;color:var(--soft)}
 
-section{padding-block:72px;border-bottom:1px solid var(--line)}
-.sec-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:40px;margin-bottom:44px;align-items:end}
-.sec-head h2{font-size:clamp(1.9rem,4vw,2.8rem);font-weight:800}
-.sec-head p{color:var(--muted);max-width:56ch}
+/* hero */
+.hero{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:48px;align-items:center}
+.hero h1{font-size:clamp(2.8rem,8vw,6rem);font-weight:800}
+.hero .intro{margin-top:28px;font-size:1.25rem;max-width:36ch}
+.now{margin-top:28px;padding:14px 16px;background:var(--wash);border:1px solid var(--rule);max-width:42ch;font-size:.95rem}
+.now .mono{display:block;margin-bottom:4px;color:var(--soft)}
 
-/* Services */
-.services{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2px;background:var(--line);border:2px solid var(--line)}
-.svc{background:var(--surface);padding:28px;display:flex;flex-direction:column;gap:12px;min-width:0}
-.svc h3{font-size:1.4rem;font-weight:700}
-.svc p{color:var(--muted)}
-.svc ul{margin:4px 0 0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:8px}
-.svc li{font-family:var(--mono);font-size:.74rem;padding:4px 10px;background:var(--accent-soft);color:var(--ink)}
+/* big line */
+.quote{text-align:left}
+.quote h2{font-size:clamp(2rem,5.4vw,3.8rem);font-weight:800;max-width:20ch}
+.pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:40px;margin-top:56px;max-width:720px}
 
-/* Method: a true sequence */
-.steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;counter-reset:s}
-.step{position:relative;padding-top:20px;border-top:3px solid var(--line);min-width:0}
-.step::before{counter-increment:s;content:"0" counter(s);font-family:var(--mono);font-size:.8rem;color:var(--accent);position:absolute;top:-1.6em;left:0}
-.step:last-child{border-top-color:var(--accent)}
-.step h3{font-size:1.2rem;font-weight:700;margin-bottom:8px}
-.step p{color:var(--muted);font-size:.98rem}
+/* builds */
+.builds{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border-top:1px solid var(--rule);border-left:1px solid var(--rule)}
+.build{padding:28px;border-right:1px solid var(--rule);border-bottom:1px solid var(--rule);display:flex;flex-direction:column;gap:14px;min-width:0}
+.build svg{width:120px}
+.build h3{font-size:1.45rem;font-weight:700}
+.build p{color:var(--soft)}
 
-/* Proof */
-.proof{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
-.case{background:var(--surface);border:1px solid var(--line);padding:26px;display:flex;flex-direction:column;gap:14px;min-width:0}
-.case .num{font-family:var(--display);font-weight:800;font-size:2.4rem;line-height:1;color:var(--accent);font-variant-numeric:tabular-nums}
-.case h3{font-size:1.15rem;font-weight:700}
-.case p{color:var(--muted);font-size:.98rem}
-.case .label{margin-top:auto}
+/* steps (a real sequence) */
+.steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:28px;margin-top:8px}
+.step{min-width:0}
+.step h3{font-size:1.2rem;font-weight:700;margin:12px 0 8px}
+.step p{color:var(--soft);font-size:.98rem}
+.track{margin-bottom:28px}
 
-/* Engagements */
-.ways{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
-.way{border-top:3px solid var(--ink);padding-top:18px;display:flex;flex-direction:column;gap:10px;min-width:0}
-.way h3{font-size:1.3rem;font-weight:700}
-.way .dur{font-family:var(--mono);font-size:.8rem;color:var(--accent)}
-.way p{color:var(--muted)}
-.note{margin-top:32px;color:var(--muted);font-size:.95rem;max-width:70ch}
+/* receipts */
+.receipts{display:flex;flex-direction:column}
+.receipt{display:grid;grid-template-columns:150px minmax(0,1fr) minmax(0,220px);gap:24px;padding:22px 0;border-top:1px solid var(--rule);align-items:baseline}
+.receipt:last-child{border-bottom:1px solid var(--rule)}
+.receipt .big{font-weight:800;font-size:1.9rem;line-height:1;font-variant-numeric:tabular-nums}
+.receipt p{min-width:0}
+.receipt .where{color:var(--soft)}
 
-/* About */
-.about{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:48px}
-.about .body p+p{margin-top:16px}
-.about .body{max-width:62ch}
-.creds{display:flex;flex-direction:column;gap:12px}
-.creds div{padding-bottom:12px;border-bottom:1px solid var(--line)}
-.creds strong{font-family:var(--display);display:block}
-.creds span{color:var(--muted);font-size:.95rem}
+/* ways in */
+.ways{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px}
+.way{border-top:2px solid var(--ink);padding-top:16px;min-width:0}
+.way h3{font-size:1.3rem;font-weight:700;margin:6px 0 8px}
+.way p{color:var(--soft)}
+.fine{margin-top:32px;color:var(--soft);font-size:.95rem;max-width:64ch}
 
-/* Contact */
-.contact{background:var(--accent);color:var(--on-accent);margin-block:72px;padding:48px max(24px,4vw);display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:32px;align-items:center}
-.contact h2{font-size:clamp(2rem,4.6vw,3.2rem);font-weight:800}
-.contact .lines{display:flex;flex-direction:column;gap:10px;font-family:var(--display);font-size:1.05rem;min-width:0}
-.contact .lines span{overflow-wrap:anywhere;user-select:all}
-.contact a{text-decoration-color:currentColor}
-.copy{font:inherit;font-family:var(--mono);font-size:.75rem;letter-spacing:.06em;text-transform:uppercase;background:transparent;color:inherit;border:1.5px solid currentColor;padding:6px 10px;cursor:pointer;align-self:flex-start}
-footer{padding-block:0 40px;color:var(--muted);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+/* thinking */
+.thinking{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 40px}
+.thought{padding:18px 0;border-top:1px solid var(--rule);min-width:0}
+.thought h3{font-size:1.15rem;font-weight:700;margin-bottom:6px}
+.thought p{color:var(--soft)}
 
-@media (max-width:860px){
-  .hero,.sec-head,.about,.contact{grid-template-columns:minmax(0,1fr);gap:28px}
-  .steps{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:44px}
-  .proof,.ways{grid-template-columns:minmax(0,1fr)}
+/* me */
+.me{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:48px}
+.me .body p+p{margin-top:16px}
+.me .body{max-width:60ch;font-size:1.1rem}
+.facts{display:flex;flex-direction:column;gap:10px;margin-top:28px;font-size:.95rem}
+.facts div{display:grid;grid-template-columns:120px minmax(0,1fr);gap:12px}
+
+/* contact */
+.contact h2{font-size:clamp(2.2rem,6vw,4.2rem);font-weight:800;max-width:16ch}
+.reach{display:flex;flex-wrap:wrap;gap:16px 28px;align-items:center;margin-top:32px;font-size:1.1rem}
+.reach span{overflow-wrap:anywhere;user-select:all}
+.copy{font-family:var(--mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;background:transparent;color:var(--ink);border:1.5px solid var(--ink);padding:7px 12px;cursor:pointer}
+.copy:hover{background:var(--ink);color:var(--paper)}
+footer{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:20px 24px;color:var(--soft)}
+
+@media (max-width:820px){
+  .hero,.me{grid-template-columns:minmax(0,1fr);gap:32px}
+  .steps{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .ways,.thinking{grid-template-columns:minmax(0,1fr)}
+  .receipt{grid-template-columns:minmax(0,1fr);gap:6px}
 }
 @media (max-width:560px){
-  .services,.steps{grid-template-columns:minmax(0,1fr)}
-  .hero{padding-block:40px 48px}
-  section{padding-block:52px}
+  .builds,.steps,.pair{grid-template-columns:minmax(0,1fr)}
+  .panel{padding:52px 16px}
+  .bar,footer{padding-inline:16px}
+  .page{border:0}
+}
+@media (prefers-reduced-motion:no-preference){
+  .hero svg .grow{stroke-dasharray:420;stroke-dashoffset:0;animation:draw 2.4s ease-out both}
+  @keyframes draw{from{stroke-dashoffset:420}to{stroke-dashoffset:0}}
 }
 </style>
 </head>
 <body>
 
-<div class="wrap">
-  <header class="top">
-    <a class="brand" href="#top" id="top">Abiha Khan<span>.</span></a>
-    <nav aria-label="Sections">
-      <a href="#services">Services</a>
-      <a href="#method">How I work</a>
-      <a href="#work">Work</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
+<div class="page">
+  <header class="bar">
+    <span class="mono">Abiha Khan</span>
+    <nav class="mono" aria-label="Sections">
+      <a href="#build">Build</a><a href="#how">How</a><a href="#receipts">Receipts</a><a href="#me">Me</a><a href="#write">Write to me</a>
     </nav>
   </header>
 
-  <!-- HERO: your one-line thesis -->
-  <div class="hero">
-    <div>
-      <p class="label">Independent consultant · Strategy, programmes, partnerships</p>
-      <h1 style="margin-top:14px">I take programmes from <span class="z">zero to one</span>, then get people running them.</h1>
-      <p class="lede">I work with climate, energy and development organisations that need something new to exist: a programme, a strategy, a coalition, a story funders understand. I design it, find the partners, and stay until it runs.</p>
-      <div class="cta-row">
-        <a class="btn primary" href="#contact">Start a conversation</a>
-        <a class="btn ghost" href="#work">See past work</a>
-      </div>
-    </div>
-    <aside>
-      <div class="fact"><strong>20+ countries</strong><span>in the clean energy network I co-convened</span></div>
-      <div class="fact"><strong>15 → 35</strong><span>team growth at the energy think tank where I was first strategy hire</span></div>
-      <div class="fact"><strong>USD 8m</strong><span>development grant programme I led communications for</span></div>
-    </aside>
-  </div>
-
-  <!-- SERVICES: edit the four offers -->
-  <section id="services">
-    <div class="sec-head">
-      <h2>What I do</h2>
-      <p>Four kinds of work, often in the same engagement. Most clients come to me with a blank page and a deadline.</p>
-    </div>
-    <div class="services">
-      <div class="svc">
-        <p class="label">Build</p>
-        <h3>Programme design and launch</h3>
-        <p>New country or regional programmes, designed with the people who will run them: the model, the workplan, the partners and the first cohort.</p>
-        <ul><li>Programme models</li><li>Workplans</li><li>Capacity building</li></ul>
-      </div>
-      <div class="svc">
-        <p class="label">Decide</p>
-        <h3>Strategy and funding proposals</h3>
-        <p>Organisational strategies leadership can act on, and proposals funders can say yes to. Plain language, clear choices, real numbers.</p>
-        <ul><li>Multi-year strategy</li><li>Risk analysis</li><li>Grant proposals</li></ul>
-      </div>
-      <div class="svc">
-        <p class="label">Convene</p>
-        <h3>Partnerships and coalitions</h3>
-        <p>Bringing governments, funders, think tanks and companies to the same table, and agreeing the words before anyone walks into the room.</p>
-        <ul><li>Partner mapping</li><li>Convening design</li><li>Member alignment</li></ul>
-      </div>
-      <div class="svc">
-        <p class="label">Tell</p>
-        <h3>Strategic communications</h3>
-        <p>Turning policy and analysis into messages people repeat: speeches, briefs, press, creator campaigns and content built with AI tools.</p>
-        <ul><li>Messaging</li><li>Speeches and briefs</li><li>Creator content</li></ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- METHOD: a real sequence -->
-  <section id="method">
-    <div class="sec-head">
-      <h2>How a build runs</h2>
-      <p>The same four stages, whether the work is a strategy, a coalition or a new programme. Each stage ends with something you can use on its own.</p>
-    </div>
-    <div class="steps">
-      <div class="step"><h3>Listen</h3><p>Interviews with leadership, staff, partners and funders. I find the tension everyone already knows about and nobody has written down.</p></div>
-      <div class="step"><h3>Shape</h3><p>A short, opinionated draft: what we will do, what we won't, who owns what, what it costs. Built for argument, then revised.</p></div>
-      <div class="step"><h3>Line up</h3><p>Partners, funders and team signed up to the same words. Proposals, briefings and the first workplan go out.</p></div>
-      <div class="step"><h3>Run</h3><p>I stay through launch, train the people who will carry it, and hand over a system rather than a slide deck.</p></div>
-    </div>
-  </section>
-
-  <!-- WORK: proof points from past roles -->
-  <section id="work">
-    <div class="sec-head">
-      <h2>Selected work</h2>
-      <p>Recent builds across think tanks, global networks, a diplomatic mission and a content studio.</p>
-    </div>
-    <div class="proof">
-      <article class="case">
-        <div class="num">2025–27</div>
-        <h3>A strategy the board could act on</h3>
-        <p>As first strategy hire at Pakistan's energy transition think tank, I wrote the organisational strategy from leadership interviews and programme workplans, ran a three-year risk analysis on circular debt and political economy, and co-authored grant proposals.</p>
-        <p class="label">Energy transition think tank · Pakistan</p>
-      </article>
-      <article class="case">
-        <div class="num">50</div>
-        <h3>A network workstream, from concept to convening</h3>
-        <p>First hire on a new workstream within a global clean energy network. I wrote its grant proposal and briefings, aligned members across 20+ countries, and brought it to a 50-person inaugural convening in Istanbul.</p>
-        <p class="label">Global clean energy network · 20+ countries</p>
-      </article>
-      <article class="case">
-        <div class="num">0 → 1</div>
-        <h3>A creator training programme</h3>
-        <p>Designed a full capacity-building programme for content creators in Indonesia: curriculum, timeline and teaching approach. Built and contracted creator partnerships across two countries.</p>
-        <p class="label">AI content studio · Indonesia, Pakistan</p>
-      </article>
-      <article class="case">
-        <div class="num">USD 1bn</div>
-        <h3>Diplomatic communications</h3>
-        <p>Drafted an Ambassador's speeches and talking points and led communications for a USD 8m grant programme and a USD 1bn development finance framework, working with ministries, media and business groups.</p>
-        <p class="label">Foreign embassy · Islamabad</p>
-      </article>
-      <article class="case">
-        <div class="num">4 markets</div>
-        <h3>Offshore wind in emerging markets</h3>
-        <p>First communications hire for an offshore wind non-profit. Wrote summit communications and managed the project pipeline and stakeholder reporting across four markets in Asia and Latin America.</p>
-        <p class="label">Offshore wind non-profit · London</p>
-      </article>
-      <article class="case">
-        <div class="num">Jun 2026</div>
-        <h3>Firestarter talk</h3>
-        <p>Spoke at RSA House during London Climate Action Week on customer-owned clean electrification, and what changes when the people using the power also own it.</p>
-        <p class="label">London Climate Action Week</p>
-      </article>
-    </div>
-  </section>
-
-  <!-- ENGAGEMENTS: edit durations and wording; prices are left off on purpose -->
-  <section id="engage">
-    <div class="sec-head">
-      <h2>Ways to work together</h2>
-      <p>Pick the shape that fits the problem. I scope each one in a short call before quoting.</p>
-    </div>
-    <div class="ways">
-      <div class="way"><span class="dur">2 to 4 weeks</span><h3>Sprint</h3><p>One clear output: a strategy draft, a funding proposal, a messaging framework or a partner map.</p></div>
-      <div class="way"><span class="dur">3 to 6 months</span><h3>Programme build</h3><p>Design, partners and launch for a new programme or workstream, with handover to the team that will run it.</p></div>
-      <div class="way"><span class="dur">Monthly</span><h3>Retainer</h3><p>A set number of days each month for strategy, proposals and communications, on call for the moments that matter.</p></div>
-    </div>
-    <p class="note">Rates are quoted for the current year and reviewed annually by mutual agreement. I work remotely from Lahore across time zones and travel for convenings.</p>
-  </section>
-
-  <!-- ABOUT: your voice, first person -->
-  <section id="about">
-    <div class="about">
+  <!-- HERO -->
+  <section class="panel">
+    <div class="hero">
       <div>
-        <h2 style="font-size:clamp(1.9rem,4vw,2.8rem);font-weight:800">About</h2>
+        <h1>I like blank pages.</h1>
+        <p class="intro">Most of my work has started with nothing: no team, no programme, sometimes no budget. I build the thing, find the people who should run it, and stay until it works without me.</p>
+        <div class="now"><span class="mono">Now</span>Independent, based in Lahore, working with climate, energy and development teams. Thinking a lot about what AI does to work.</div>
+      </div>
+      <svg viewBox="0 0 360 300" role="img" aria-label="A single dot grows along a dashed curve into a full circle, labelled zero and one">
+        <line class="ln" x1="20" y1="250" x2="340" y2="250"/>
+        <circle class="dot" cx="40" cy="250" r="5"/>
+        <path class="ds grow" d="M40 250 C 150 248, 220 210, 270 110"/>
+        <circle class="hole" cx="280" cy="90" r="34"/>
+        <circle class="dot" cx="280" cy="90" r="5"/>
+        <text x="30" y="276">ZERO</text>
+        <text x="262" y="276">ONE</text>
+        <text x="236" y="40">IT RUNS.</text>
+      </svg>
+    </div>
+  </section>
+
+  <!-- BIG IDEA -->
+  <section class="panel quote" aria-label="Idea">
+    <div class="label mono"><span>The idea</span></div>
+    <h2>A plan is only as good as the Monday after it's approved.</h2>
+    <div class="pair">
+      <figure style="margin:0">
+        <svg viewBox="0 0 300 150" role="img" aria-label="A flat dashed line labelled plan on paper">
+          <line class="ln" x1="10" y1="120" x2="290" y2="120"/>
+          <path class="ds" d="M10 112 L 285 104"/>
+          <text x="10" y="142">PLAN ON PAPER.</text>
+        </svg>
+      </figure>
+      <figure style="margin:0">
+        <svg viewBox="0 0 300 150" role="img" aria-label="A dashed line curving sharply upward labelled plan people run">
+          <line class="ln" x1="10" y1="120" x2="290" y2="120"/>
+          <path class="ds" d="M10 118 C 140 116, 200 100, 260 22"/>
+          <path class="ln" d="M252 26 L262 18 L264 31"/>
+          <text x="10" y="142">PLAN PEOPLE RUN.</text>
+        </svg>
+      </figure>
+    </div>
+  </section>
+
+  <!-- WHAT I BUILD -->
+  <section class="panel" id="build">
+    <div class="label mono"><span>What I build</span><span>Four things, often at once</span></div>
+    <div class="builds">
+      <div class="build">
+        <svg viewBox="0 0 120 80" aria-hidden="true"><rect class="ln" x="10" y="52" width="30" height="20"/><rect class="ln" x="45" y="36" width="30" height="36"/><rect class="ds" x="80" y="14" width="30" height="58"/></svg>
+        <h3>Programmes</h3>
+        <p>A new country or regional programme, from the first sketch to the first cohort. The model, the workplan, the partners, the training.</p>
+      </div>
+      <div class="build">
+        <svg viewBox="0 0 120 80" aria-hidden="true"><path class="ln" d="M10 40 L50 40 L110 14"/><path class="ds" d="M50 40 L110 40"/><path class="ds" d="M50 40 L110 66"/><circle class="dot" cx="50" cy="40" r="4"/></svg>
+        <h3>Decisions</h3>
+        <p>Strategies and funding proposals that pick one road and say why. Plain words, real numbers, nothing a board has to decode.</p>
+      </div>
+      <div class="build">
+        <svg viewBox="0 0 120 80" aria-hidden="true"><circle class="hole" cx="22" cy="18" r="7"/><circle class="hole" cx="22" cy="62" r="7"/><circle class="hole" cx="98" cy="18" r="7"/><circle class="hole" cx="98" cy="62" r="7"/><path class="ds" d="M28 22 L56 38 M28 58 L56 42 M92 22 L64 38 M92 58 L64 42"/><circle class="dot" cx="60" cy="40" r="5"/></svg>
+        <h3>Coalitions</h3>
+        <p>Governments, funders, think tanks and companies at one table, with the words agreed before anyone walks into the room.</p>
+      </div>
+      <div class="build">
+        <svg viewBox="0 0 120 80" aria-hidden="true"><path class="ln" d="M10 20 L50 20 M10 32 L44 32 M10 44 L50 44"/><path class="ds" d="M58 32 C 72 10, 84 54, 98 32 S 110 24, 114 32"/></svg>
+        <h3>Stories</h3>
+        <p>Policy and analysis turned into things people repeat: speeches, briefs, creator content, and work made with AI tools.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW (a real sequence) -->
+  <section class="panel" id="how">
+    <div class="label mono"><span>How it usually goes</span><span>Four stages</span></div>
+    <svg class="track" viewBox="0 0 1000 40" role="img" aria-label="A line with four stops, the last one filled">
+      <line class="ln" x1="12" y1="20" x2="988" y2="20"/>
+      <circle class="hole" cx="12" cy="20" r="8"/><circle class="hole" cx="337" cy="20" r="8"/><circle class="hole" cx="662" cy="20" r="8"/><circle class="dot" cx="988" cy="20" r="9"/>
+    </svg>
+    <div class="steps">
+      <div class="step"><span class="mono soft">Listen</span><h3>Ask too many questions</h3><p>Leadership, staff, partners, funders. I look for the problem everyone already knows and nobody has written down.</p></div>
+      <div class="step"><span class="mono soft">Draft</span><h3>Write something arguable</h3><p>A short draft with clear choices: what we do, what we don't, who owns what. Then we fight about it, kindly.</p></div>
+      <div class="step"><span class="mono soft">Align</span><h3>Get everyone saying the same words</h3><p>Partners, funders and the team signed up to one version. Proposals and the first workplan go out.</p></div>
+      <div class="step"><span class="mono soft">Hand over</span><h3>Make myself unnecessary</h3><p>I stay through launch, train the people carrying it, and leave a system, not a slide deck.</p></div>
+    </div>
+  </section>
+
+  <!-- RECEIPTS -->
+  <section class="panel" id="receipts">
+    <div class="label mono"><span>Receipts</span><span>Names kept private</span></div>
+    <div class="receipts">
+      <div class="receipt"><span class="big">15 → 35</span><p>First strategy hire at an energy transition think tank. Wrote its multi-year strategy and co-wrote the proposals while the team more than doubled.</p><span class="where mono">Think tank · Pakistan</span></div>
+      <div class="receipt"><span class="big">20+</span><p>First person on a new workstream inside a global clean energy network. Took it from a concept note to a 50-person first convening, with members in 20+ countries agreeing the words.</p><span class="where mono">Global network</span></div>
+      <div class="receipt"><span class="big">0 → 1</span><p>Designed a full training programme for content creators in Indonesia, and signed creator partnerships in two countries for an AI content studio.</p><span class="where mono">Content studio · Asia</span></div>
+      <div class="receipt"><span class="big">USD 8m</span><p>Wrote an Ambassador's speeches and ran communications for a development grant programme, working with ministries, media and business groups.</p><span class="where mono">Foreign embassy · Islamabad</span></div>
+      <div class="receipt"><span class="big">4</span><p>First communications hire at an offshore wind non-profit, covering projects and stakeholders in four markets across Asia and Latin America.</p><span class="where mono">Non-profit · London</span></div>
+      <div class="receipt"><span class="big">3 min</span><p>A firestarter talk at RSA House, London Climate Action Week 2026, on what changes when the people using power also own it.</p><span class="where mono">On stage</span></div>
+    </div>
+  </section>
+
+  <!-- WAYS IN -->
+  <section class="panel" id="ways">
+    <div class="label mono"><span>Ways in</span><span>Pick a shape</span></div>
+    <div class="ways">
+      <div class="way"><span class="mono soft">2 to 4 weeks</span><h3>Sprint</h3><p>One clear thing: a strategy draft, a proposal, a messaging framework or a partner map.</p></div>
+      <div class="way"><span class="mono soft">3 to 6 months</span><h3>Build</h3><p>A new programme or workstream, designed, staffed with partners, launched and handed over.</p></div>
+      <div class="way"><span class="mono soft">Monthly</span><h3>Retainer</h3><p>A few days a month on call for strategy, proposals and the moments that matter.</p></div>
+    </div>
+    <p class="fine">I scope everything in a short call first. Rates are set for the current year and reviewed annually. I work remotely across time zones and travel for convenings.</p>
+  </section>
+
+  <!-- THINKING -->
+  <section class="panel" id="thinking">
+    <div class="label mono"><span>What I'm thinking about</span><span>Open questions</span></div>
+    <div class="thinking">
+      <div class="thought"><h3>What is a job, once AI does half of it?</h3><p>I use AI every day. The interesting part is less the speed and more which parts of work stay human, and who decides.</p></div>
+      <div class="thought"><h3>Who owns the energy transition?</h3><p>Households putting up their own panels are changing grids faster than many plans. I want programmes that start from them.</p></div>
+      <div class="thought"><h3>Is AI-made content honest?</h3><p>I've built with AI content tools. I keep asking where the line sits between making a story clearer and making it up.</p></div>
+      <div class="thought"><h3>Can work look good?</h3><p>Taste matters to me, in tailoring, in fragrance, in a well-made document. I think good design is a form of respect.</p></div>
+    </div>
+  </section>
+
+  <!-- ME -->
+  <section class="panel" id="me">
+    <div class="me">
+      <div>
+        <div class="label mono"><span>Me</span></div>
+        <svg viewBox="0 0 200 120" aria-hidden="true" style="width:200px"><path class="ds" d="M10 100 C 40 20, 70 110, 100 60 S 160 10, 190 30"/><circle class="dot" cx="190" cy="30" r="5"/><circle class="hole" cx="10" cy="100" r="5"/></svg>
       </div>
       <div class="body">
-        <p>I've spent my career at the start of things: first strategy hire, first communications hire, first person on a new workstream. That is where I do my best work. I like the blank page, and I like the moment a plan stops being mine and becomes the team's.</p>
-        <p>I've worked inside think tanks, a diplomatic mission, global networks and a content studio, with colleagues across Asia, Europe, Africa, Australia and the Americas. I'm curious about the future of work, what AI changes about it, and how to make the energy transition feel like something people own.</p>
-        <div class="creds" style="margin-top:28px">
-          <div><strong>Schwarzman Scholar</strong><span>Master of Management Science (Global Affairs), Tsinghua University</span></div>
-          <div><strong>BS (Hons) Management</strong><span>University of the Punjab, public management</span></div>
-          <div><strong>Languages</strong><span>English and Urdu (native), Hindi (conversational)</span></div>
+        <p>I've spent most of my career at the start of things: first strategy hire, first communications hire, first person on a new workstream. That's where I'm happiest. I like the blank page, and I like the moment a plan stops being mine and becomes the team's.</p>
+        <p>I've worked inside think tanks, a diplomatic mission, global networks and a content studio, with colleagues on five continents. I'm curious about the future of work, the ethics of the tools we're all suddenly using, and how to make big transitions feel like something people own.</p>
+        <div class="facts">
+          <div><span class="mono soft">Scholar</span><span>Schwarzman Scholar, Master's in Global Affairs</span></div>
+          <div><span class="mono soft">Degree</span><span>BS (Hons) Management, University of the Punjab</span></div>
+          <div><span class="mono soft">Languages</span><span>English, Urdu, Hindi</span></div>
+          <div><span class="mono soft">Off-work</span><span>Tailoring, fragrance, martial arts</span></div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- CONTACT -->
-  <div class="contact" id="contact">
-    <h2>Got something that needs to exist by next quarter?</h2>
-    <div class="lines">
+  <section class="panel contact" id="write">
+    <div class="label mono"><span>Write to me</span></div>
+    <h2>Got something that should exist by next quarter?</h2>
+    <div class="reach">
       <span id="email">abiha@alumni.schwarzmanscholars.org</span>
       <button class="copy" id="copy-email" type="button">Copy email</button>
-      <a href="https://www.linkedin.com/in/abihafnu" target="_blank" rel="noopener">LinkedIn: abihafnu</a>
+      <a href="https://www.linkedin.com/in/abihafnu" target="_blank" rel="noopener">LinkedIn ↗</a>
     </div>
-  </div>
+  </section>
 
-  <footer><span>© 2026 Abiha Khan</span><span class="label">Lahore · Remote worldwide</span></footer>
+  <footer class="mono"><span>© 2026 Abiha Khan</span><span>Lahore · everywhere</span></footer>
 </div>
 
 <script>
 document.getElementById('copy-email').addEventListener('click', function(){
-  var b=this, t=document.getElementById('email').textContent.trim();
-  var done=function(){b.textContent='Copied';setTimeout(function(){b.textContent='Copy email'},1600)};
-  try{navigator.clipboard.writeText(t).then(done).catch(sel)}catch(e){sel()}
-  function sel(){var r=document.createRange();r.selectNodeContents(document.getElementById('email'));var s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent='Selected, press copy'}
+  var b=this, el=document.getElementById('email'), t=el.textContent.trim();
+  function sel(){var r=document.createRange();r.selectNodeContents(el);var s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent='Selected, press copy'}
+  try{navigator.clipboard.writeText(t).then(function(){b.textContent='Copied';setTimeout(function(){b.textContent='Copy email'},1600)}).catch(sel)}catch(e){sel()}
 });
 </script>
 </body>
