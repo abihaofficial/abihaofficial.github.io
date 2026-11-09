@@ -53,6 +53,9 @@ h3{font-family:var(--serif);font-size:clamp(20px,2.6vw,24px);line-height:1.2;fon
 .hint{color:var(--soft);font-size:14px;margin-top:20px}
 .cta{display:inline-block;background:var(--ink);color:var(--card);padding:12px 22px;border-radius:999px;font-weight:700;text-decoration:none;margin:8px 10px 0 0}
 .cta.ghost{background:none;color:var(--ink);border:1px solid var(--ink)}
+button.cta{font:inherit;font-weight:700;border:0;cursor:pointer}
+.email-line{font-size:18px;font-weight:700;margin:18px 0 4px;word-break:break-all}
+.email-line a{color:var(--ink)}
 /* swipe rails */
 .rail-head{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;margin:0 4px 14px}
 .rail-head h2{margin-bottom:0}
@@ -201,7 +204,8 @@ h3{font-family:var(--serif);font-size:clamp(20px,2.6vw,24px);line-height:1.2;fon
   <div class="kicker">Let's talk</div>
   <h2>Got a strategy that needs to become real?</h2>
   <p class="lead">Send me the problem in two lines. I'll tell you honestly whether I'm the right person.</p>
-  <a class="cta" href="mailto:abiha@alumni.schwarzmanscholars.org">Email me</a>
+  <p class="email-line"><a href="mailto:abiha@alumni.schwarzmanscholars.org">abiha@alumni.schwarzmanscholars.org</a></p>
+  <button type="button" class="cta" onclick="navigator.clipboard.writeText('abiha@alumni.schwarzmanscholars.org').then(()=>{this.textContent='Copied'})">Copy email</button>
   <a class="cta ghost" href="https://linkedin.com/in/abihafnu" target="_blank" rel="noopener">LinkedIn</a>
   <p class="hint">Based in Pakistan. Working remotely across time zones.</p>
 </section>
