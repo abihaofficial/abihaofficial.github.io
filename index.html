@@ -97,7 +97,7 @@ img{display:block;max-width:100%}
 .status{display:inline-flex;align-items:center;gap:10px;margin:8px 0 26px}
 .status i{width:10px;height:10px;border-radius:50%;background:var(--cobalt);box-shadow:0 0 0 0 rgba(43,80,224,.5);animation:ping 2s infinite}
 @keyframes ping{70%{box-shadow:0 0 0 10px rgba(43,80,224,0)}100%{box-shadow:0 0 0 0 rgba(43,80,224,0)}}
-h1{font-family:var(--disp);font-weight:400;font-variation-settings:"opsz" 144;font-size:clamp(36px,5vw,64px);line-height:1.06;letter-spacing:-.012em;max-width:900px;margin:0 auto 22px;text-wrap:balance;position:relative}
+h1{font-family:var(--disp);font-weight:400;font-variation-settings:"opsz" 144;font-size:clamp(36px,5vw,64px);line-height:1.06;letter-spacing:-.012em;max-width:820px;margin:0 auto 22px;text-wrap:balance;position:relative}
 h1 .u{position:relative;white-space:nowrap}
 h1 .u svg{position:absolute;left:-2%;bottom:-.18em;width:104%;height:.36em;overflow:visible}
 .av{position:absolute;width:76px;height:76px;border-radius:50%;border:3px solid var(--coral);background:var(--paper);overflow:hidden;box-shadow:0 0 0 4px var(--paper)}
@@ -228,8 +228,11 @@ footer .hand{font-size:24px;color:var(--paper)}
 .rv.in{opacity:1;transform:rotate(var(--r,0deg))}
 .sn.rv.in,.ic.rv.in{transform:rotate(var(--r))}
 
-@media (max-width:1020px){
+@media (max-width:1280px){
   .hero .hp{position:relative;right:auto;top:auto;margin:44px auto 0;width:220px}
+  .sticker.hide-md{display:none}
+}
+@media (max-width:1020px){
   .nav .links a span{display:none}
   .about .grid{grid-template-columns:1fr 1fr}
   .about .copy{grid-column:1/-1;order:-1}
