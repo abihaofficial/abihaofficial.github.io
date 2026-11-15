@@ -1,0 +1,34 @@
+<!doctype html><html><head><meta name="robots" content="noindex"><link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=DM+Sans:wght@500;700&family=Fraunces:ital,opsz,wght@0,9..144,400;1,9..144,400&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;box-sizing:border-box}
+body{width:1200px;height:627px;background:#F6F1E6;background-image:linear-gradient(transparent 31px,#E3DCCD 32px);background-size:100% 32px;position:relative;overflow:hidden;color:#1B1B1B;font-family:"DM Sans"}
+body:before{content:"";position:absolute;left:58px;top:0;bottom:0;width:2px;background:#F2B2A4}
+.hi{position:absolute;left:110px;top:58px;font:600 38px Caveat}
+.box{position:absolute;left:96px;top:110px;width:600px;height:200px}
+.name{position:absolute;left:96px;top:118px;width:600px;text-align:center;font:150px/1.15 Fraunces;display:flex;justify-content:center}
+.name span{display:inline-block}
+h1{position:absolute;left:110px;top:345px;width:640px;font:400 54px/1.06 Fraunces;letter-spacing:-.5px}
+h1 u{text-decoration:none;position:relative}
+h1 u:after{content:"";position:absolute;left:0;right:0;bottom:-6px;height:7px;border-radius:9px;background:#F2684A;transform:rotate(-1deg)}
+.foot{position:absolute;left:110px;bottom:52px;font:700 17px "Space Mono";letter-spacing:1.5px;text-transform:uppercase;display:flex;align-items:center;gap:12px}
+.foot i{width:12px;height:12px;border-radius:50%;background:#2B50E0}
+.pol{position:absolute;right:92px;top:70px;width:330px;background:#fff;padding:18px 18px 70px;transform:rotate(5deg);box-shadow:0 30px 50px -24px rgba(0,0,0,.5)}
+.pol img{width:100%;aspect-ratio:1/1.03;object-fit:cover;display:block}
+.pol p{position:absolute;left:0;right:0;bottom:16px;text-align:center;font:600 34px Caveat}
+.tape{position:absolute;width:140px;height:40px;background:rgba(156,198,242,.75);top:-18px;left:50%;transform:translateX(-50%) rotate(-4deg)}
+.st{position:absolute;font:700 16px "Space Mono";letter-spacing:1px;text-transform:uppercase;padding:12px 20px;border:2.5px solid #1B1B1B;border-radius:99px;box-shadow:4px 4px 0 #1B1B1B}
+</style></head><body>
+<p class="hi">hello, my name is</p>
+<svg class="box" viewBox="0 0 600 200" preserveAspectRatio="none"><path d="M10 14c160-10 400-12 578-4 4 60 6 120-2 178-180 8-420 10-574 2-6-56-8-120 2-174 40-4 80-5 120-5" fill="none" stroke="#F2684A" stroke-width="4" stroke-linecap="round"/></svg>
+<div class="name" style="font-size:150px;top:112px;font-weight:400;font-variation-settings:'opsz' 144;letter-spacing:-5px">Abiha</div>
+<h1>I write the plan, then stay for the <u><i>messy part.</i></u></h1>
+<p class="foot"><i></i>Strategy · programmes · partnerships</p>
+<div class="pol"><span class="tape"></span><img src="abiha%202024.jpeg" crossorigin="anonymous"><p>hi, that's me</p></div>
+<span class="st" style="right:330px;top:470px;background:#BFE3D5;transform:rotate(-7deg)">Schwarzman Scholar</span>
+<span class="st" style="right:60px;bottom:40px;background:#F7DE9C;transform:rotate(6deg)">Lahore → worldwide</span>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script>
+window.addEventListener('load',async()=>{await document.fonts.ready;await new Promise(r=>setTimeout(r,600));
+ const c=await html2canvas(document.body,{width:1200,height:627,scale:1,useCORS:true,backgroundColor:'#F6F1E6'});
+ c.toBlob(b=>{window.__blob=b;document.title='ready';if(window.opener)window.opener.postMessage({share:b},'https://github.com')},'image/jpeg',.92)});
+</script></body></html>
